@@ -1,3 +1,7 @@
 body {
-  background-color: #ccc;
+  background-color: #cccccc;
+  border: 0px solid #ccc;
+}
+body * {
+  color: red;
 }
