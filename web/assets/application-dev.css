@@ -1,7 +1,13 @@
 body {
   background-color: #cccccc;
   border: 0px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 body * {
   color: red;
+  color: #008000;
+}
+body *.class {
+  font-weight: bold;
 }
