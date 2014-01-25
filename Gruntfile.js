@@ -4,14 +4,6 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    cssmin: {
-      production: {
-        expand: true,
-        cwd: 'web/assets/',
-        src: ['application.css'],
-        dest: 'web/assets/'
-      }
-    },
     csslint: {
       strict: {
         options: {
@@ -45,7 +37,7 @@ module.exports = function(grunt) {
           'assets/bootstrap/*.less',
           'assets/less/*.less'
         ],
-        tasks: ['less', 'csslint', 'cssmin']
+        tasks: ['less', 'csslint']
       }
     }
   });
@@ -54,7 +46,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-csslint');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Register tasks
   grunt.registerTask('default', [
